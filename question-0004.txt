@@ -1,0 +1,25 @@
+Se tiene un DataFrame X con datos numéricos. Se desea aplicar KMeans clustering para agrupar los datos.
+
+Después de entrenar el modelo, se desea calcular la distancia promedio de cada punto a su centroide asignado.
+
+Tarea
+
+Desarrolla una función en Python llamada:
+
+def mean_cluster_distance(X: pd.DataFrame, k: int) -> float:
+
+La función debe:
+
+1.	Entrenar un modelo KMeans de sklearn con k clusters.
+2.	Obtener el centroide correspondiente a cada punto.
+3.	Calcular la distancia euclidiana entre cada punto y su centroide.
+4.	Devolver el promedio de todas las distancias.
+
+Argumentos
+
+•	X (pd.DataFrame) → dataset
+•	k (int) → número de clusters
+
+Valor de retorno
+
+•	float → distancia promedio al centroide.
