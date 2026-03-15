@@ -1,0 +1,29 @@
+En un problema de machine learning supervisado, queremos evaluar qué tan importante es cada variable para un modelo entrenado.
+
+Se tiene un DataFrame de pandas X con las variables predictoras y un array de numpy y con la variable objetivo. Se desea entrenar
+un modelo de Random Forest y calcular la importancia de las variables mediante permutation importance.
+
+Tarea
+
+Desarrolla una función en Python llamada:
+
+def permutation_importance_mean(X: pd.DataFrame, y: np.ndarray, n_repeats: int) -> np.ndarray:
+
+La función debe:
+
+1.	Entrenar un modelo RandomForestClassifier de sklearn usando X y y.
+2.	Calcular la permutation importance usando sklearn.inspection.permutation_importance.
+3.	Usar el argumento n_repeats para definir cuántas veces se permuta cada variable.
+4.	Calcular la importancia promedio de cada variable.
+5.	Devolver un array de numpy (np.ndarray) con las importancias promedio de cada feature en el mismo orden de las columnas de X.
+
+Argumentos
+
+•	X (pd.DataFrame) → variables predictoras.
+•	y (np.ndarray) → variable objetivo.
+•	n_repeats (int) → número de permutaciones para cada variable.
+
+Valor de retorno
+
+•	np.ndarray
+Un array de numpy de tamaño (n_features,) con la importancia promedio de cada variable.
