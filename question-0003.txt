@@ -1,0 +1,28 @@
+Se tiene un DataFrame X con variables predictoras y un array y con etiquetas de clase.
+
+Se desea entrenar un modelo LogisticRegression y calcular la exactitud para cada clase individualmente.
+
+Tarea
+
+Desarrolla una función en Python llamada:
+
+def class_accuracy(X: pd.DataFrame, y: np.ndarray) -> np.ndarray:
+
+La función debe:
+
+1. Entrenar un modelo LogisticRegression de sklearn.
+2. Usar el mismo dataset para entrenar y predecir.
+3. Calcular la exactitud por clase:
+
+accuracy_c="predicciones correctas de la clase c" /("n" "u"  ˊ"mero total de ejemplos de la clase c" )
+
+4. Devolver un array de numpy con la exactitud de cada clase ordenada según las clases únicas de y.
+
+Argumentos
+
+	X (pd.DataFrame)
+	y (np.ndarray)
+
+Valor de retorno
+
+	np.ndarray → exactitud por clase.
