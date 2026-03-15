@@ -1,0 +1,26 @@
+En un problema de regresión, se tiene un DataFrame de pandas X que contiene las variables predictoras y un array de numpy y que contiene la variable objetivo.
+
+Se desea evaluar el desempeño de un modelo LinearRegression usando validación cruzada de k particiones.
+
+Tarea
+
+Desarrolla una función en Python llamada:
+
+def mean_cv_mse(X: pd.DataFrame, y: np.ndarray, k: int) -> float:
+
+La función debe:
+
+1.	Entrenar un modelo LinearRegression de sklearn.
+2.	Usar KFold cross-validation con k particiones.
+3.	Calcular el Mean Squared Error (MSE) en cada fold.
+4.	Devolver el promedio del MSE obtenido en todos los folds.
+
+Argumentos
+
+•	X (pd.DataFrame) → variables predictoras
+•	y (np.ndarray) → variable objetivo
+•	k (int) → número de folds de la validación cruzada
+
+Valor de retorno
+
+•	float → MSE promedio de la validación cruzada.
