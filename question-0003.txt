@@ -20,9 +20,9 @@ accuracy_c="predicciones correctas de la clase c" /("n" "u"  ˊ"mero total de ej
 
 Argumentos
 
-	X (pd.DataFrame)
-	y (np.ndarray)
+- X (pd.DataFrame)
+- y (np.ndarray)
 
 Valor de retorno
 
-	np.ndarray → exactitud por clase.
+- np.ndarray → exactitud por clase.
