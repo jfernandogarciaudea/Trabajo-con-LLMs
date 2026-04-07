@@ -31,7 +31,7 @@ def class_accuracy(X: pd.DataFrame, y: np.ndarray) -> np.ndarray:
 
 
 # Función generadora
-def generar_caso_de_uso_preparar_datos():
+def generar_caso_de_uso_preparar_datos_0003():
     np.random.seed(None)  # aleatorio
 
     # Tamaños aleatorios
@@ -61,7 +61,7 @@ def generar_caso_de_uso_preparar_datos():
 
     return input_data, output_data
 
-input_data, output_data = generar_caso_de_uso_preparar_datos()
+input_data, output_data = generar_caso_de_uso_preparar_datos_0003()
 
 print("=== INPUT ===")
 print(input_data["X"].head())
