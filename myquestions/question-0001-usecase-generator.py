@@ -23,7 +23,7 @@ def permutation_importance_mean(X: pd.DataFrame, y: np.ndarray, n_repeats: int) 
 
 
 # Función solicitada
-def generar_caso_de_uso_preparar_datos():
+def generar_caso_de_uso_preparar_datos_0001():
     # Componente aleatorio
     np.random.seed(None)
 
