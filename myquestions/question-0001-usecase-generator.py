@@ -55,7 +55,7 @@ def generar_caso_de_uso_preparar_datos_0001():
 
     return input_data, output_data
 
-input_data, output_data = generar_caso_de_uso_preparar_datos()
+input_data, output_data = generar_caso_de_uso_preparar_datos_0001()
 
 print("=== INPUT ===")
 print("X (primeras filas):")
