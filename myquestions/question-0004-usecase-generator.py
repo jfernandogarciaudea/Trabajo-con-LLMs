@@ -33,7 +33,7 @@ def mean_cluster_distance(X: pd.DataFrame, k: int) -> float:
 
 
 # Función generadora
-def generar_caso_de_uso_preparar_datos():
+def generar_caso_de_uso_preparar_datos_0004():
     np.random.seed(None)  # aleatorio
 
     # Dimensiones aleatorias
@@ -67,7 +67,7 @@ def generar_caso_de_uso_preparar_datos():
 
     return input_data, output_data
 
-input_data, output_data = generar_caso_de_uso_preparar_datos()
+input_data, output_data = generar_caso_de_uso_preparar_datos_0004()
 
 print("=== INPUT ===")
 print(input_data["X"].head())
