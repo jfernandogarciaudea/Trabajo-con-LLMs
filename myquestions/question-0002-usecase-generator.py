@@ -34,7 +34,7 @@ def mean_cv_mse(X: pd.DataFrame, y: np.ndarray, k: int) -> float:
 
 
 # Función generadora de casos de uso
-def generar_caso_de_uso_preparar_datos():
+def generar_caso_de_uso_preparar_datos_0002():
     np.random.seed(None)  # aleatoriedad
 
     # Tamaño aleatorio
@@ -66,7 +66,7 @@ def generar_caso_de_uso_preparar_datos():
 
     return input_data, output_data
 
-input_data, output_data = generar_caso_de_uso_preparar_datos()
+input_data, output_data = generar_caso_de_uso_preparar_datos_0002()
 
 print("=== INPUT ===")
 print("X:")
