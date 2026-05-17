@@ -1,0 +1,14 @@
+El error Execution error: entrenar_logistica() missing 2 required positional arguments: 'df' and 'target_col' significa que la función entrenar_logistica está correctamente definida 
+para recibir dos parámetros (df y target_col), pero el script encargado de ejecutar la validación la está llamando completamente vacía, sin pasarle ningún argumento.
+
+Dependiendo de cómo esté montada la infraestructura de tu validador en el repositorio, esto se debe a una de las siguientes dos causas:
+
+Causa 1: Falta pasar los argumentos en tu script de validación (El "conector")
+Si tú mismo estás escribiendo el archivo o código que se encarga de enlazar el generador con la respuesta del alumno 
+(por ejemplo, en un archivo test.py o un pipeline), es muy probable que estés llamando a la función directamente sin pasarle el diccionario de datos.
+
+Causa 2: El framework de evaluación automática requiere la estructura "args" y "kwargs"
+Muchos entornos de evaluación y calificación automática de LLMs no leen el diccionario input_dict de manera directa, sino que esperan que tenga una estructura estricta y universal utilizando obligatoriamente las llaves "args" (para argumentos posicionales en una lista) y/o "kwargs" (para argumentos de palabra clave en un diccionario).
+
+Si el framework busca input_dict.get("args") o input_dict.get("kwargs") y no los encuentra (porque pusiste "df" y "target_col" en la raíz), 
+el evaluador asume que no hay parámetros y ejecuta entrenar_logistica(), provocando tu error.
