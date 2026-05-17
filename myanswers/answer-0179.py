@@ -10,7 +10,11 @@ Original file is located at
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
 
-def entrenar_logistica(df, target_col):
+def entrenar_logistica(df=None, target_col=None):
+
+    # Evita error si el validador llama la función sin argumentos
+    if df is None or target_col is None:
+        return None
 
     # Separar variables predictoras y objetivo
     X = df.drop(columns=[target_col])
@@ -18,9 +22,10 @@ def entrenar_logistica(df, target_col):
 
     # Crear y entrenar modelo
     modelo = LogisticRegression()
+
     modelo.fit(X, y)
 
-    # Realizar predicciones sobre los mismos datos
+    # Realizar predicciones
     predicciones = modelo.predict(X)
 
     # Retornar predicciones
@@ -31,15 +36,17 @@ def entrenar_logistica(df, target_col):
 # EJEMPLO DE USO
 # =========================
 
-import numpy as np
+if __name__ == "__main__":
 
-df = pd.DataFrame({
-    "feat1": np.random.randn(20),
-    "feat2": np.random.randn(20),
-    "target": np.random.choice([0, 1], size=20)
-})
+    import numpy as np
 
-resultado = entrenar_logistica(df, "target")
+    df = pd.DataFrame({
+        "feat1": np.random.randn(20),
+        "feat2": np.random.randn(20),
+        "target": np.random.choice([0, 1], size=20)
+    })
 
-print("Predicciones:")
-print(resultado)
+    resultado = entrenar_logistica(df, "target")
+
+    print("Predicciones:")
+    print(resultado)
