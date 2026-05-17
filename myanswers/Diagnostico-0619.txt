@@ -1,0 +1,4 @@
+Si miramos el código de Answer-0619.py, la función evaluar_f1(X, y) sí está definida para recibir los dos argumentos X e y.
+
+Si el validador automático lanza el error missing 2 required positional arguments: 'X' and 'y', lo más probable es 
+que el script de evaluación esté intentando importar o llamar a la función de una manera que rompe la firma de los argumentos
